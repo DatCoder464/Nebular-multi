@@ -1,4 +1,4 @@
-package net.examplemod.fabric
+package net.nebular.fabric
 
 import net.fabricmc.loader.api.FabricLoader
 

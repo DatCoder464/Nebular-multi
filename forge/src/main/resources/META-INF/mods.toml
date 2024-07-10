@@ -4,32 +4,39 @@ loaderVersion = "[${forge_version},)"
 license = "Insert License Here"
 
 [[mods]]
-modId = "examplemod"
+modId = "nebular"
 version = "${version}"
-displayName = "Example Mod"
+displayName = "Nebular"
 authors = "Me!"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''
-logoFile = "icon.png"
+logoFile = "Nebular.png"
 
-[[dependencies.examplemod]]
+[[dependencies.nebular]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.nebular]]
 modId = "minecraft"
 mandatory = true
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.nebular]]
 modId="create"
 mandatory=true
 versionRange="${create_version}"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"
+
+[[dependencies.nebular]]
+modId = "valkyrienskies"
+mandatory = true
+versionRange = "[2.1.1-beta.3,)"
+ordering = "AFTER"
+side = "BOTH"

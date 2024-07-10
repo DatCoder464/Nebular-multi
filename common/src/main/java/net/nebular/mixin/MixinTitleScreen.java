@@ -1,6 +1,6 @@
-package net.examplemod.mixin;
+package net.nebular.mixin;
 
-import net.examplemod.ExampleMod;
+import net.nebular.Nebular;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,6 +12,6 @@ public class MixinTitleScreen {
 
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        ExampleMod.getLOGGER().info("Hello from {}!", ExampleMod.class.getName());
+        Nebular.getLOGGER().info("Hello from {}!", Nebular.class.getName());
     }
 }

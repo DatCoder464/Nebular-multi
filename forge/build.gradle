@@ -84,8 +84,8 @@ processResources {
 loom {
     forge {
         mixinConfig(
-                "examplemod-common.mixins.json",
-                "examplemod.mixins.json"
+                "nebular-common.mixins.json",
+                "nebular.mixins.json"
         )
     }
 }

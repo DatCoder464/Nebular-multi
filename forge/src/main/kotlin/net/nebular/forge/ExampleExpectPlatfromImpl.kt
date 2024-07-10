@@ -1,4 +1,4 @@
-package net.examplemod.forge
+package net.nebular.forge
 
 object ExampleExpectPlatfromImpl {
     @JvmStatic

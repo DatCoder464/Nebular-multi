@@ -1,4 +1,4 @@
-package net.examplemod
+package net.nebular
 
 import dev.architectury.injectables.annotations.ExpectPlatform
 
