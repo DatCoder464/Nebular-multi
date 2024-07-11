@@ -20,9 +20,8 @@ object Nebular {
     @JvmStatic
     fun init() {
         LOGGER.info(
-            "{} initializing! on platform: {}",
-            NAME,
-            ExampleExpectPlatform.platformName()
+            "{} initializing!",
+            NAME
         )
     }
 
@@ -35,14 +34,6 @@ object Nebular {
             .icon { NebularBlocks.HULL.asStack() }
             .displayItems { _, output ->
                 output.accept(NebularBlocks.HULL.asStack())
-//                REGISTRATE.getAll(BuiltInRegistries.ITEM.key()).forEach {
-//                    it as ItemEntry<*>
-//                    output.accept(it.asStack())
-//                }
-//                REGISTRATE.getAll(BuiltInRegistries.BLOCK.key()).forEach {
-//                    it as BlockEntry<*>
-//                    output.accept(it.asStack())
-//                }
             }
             .build()
 

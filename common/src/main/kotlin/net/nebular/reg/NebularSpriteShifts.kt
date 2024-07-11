@@ -22,7 +22,7 @@ object NebularSpriteShifts {
 
     fun getCT(type: CTType, blockTextureName : String, connectedTextureName: String) =
         CTSpriteShifter.getCT(type, Nebular.asResource("block/" + blockTextureName),
-            Nebular.asResource("block/" + connectedTextureName + "_connected"));
+            Nebular.asResource("block/" + connectedTextureName + "_connected"))
 
     fun getCT(type: CTType, blockTextureName : String) =
         getCT(type, blockTextureName, blockTextureName)
