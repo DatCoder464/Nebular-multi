@@ -1,11 +1,10 @@
 package net.nebular
 
-import com.simibubi.create.Create
 import com.simibubi.create.foundation.data.CreateRegistrate
-import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.item.CreativeModeTab
 import net.nebular.reg.NebularBlocks
+import net.nebular.reg.NebularCreativeTabs
+import net.nebular.reg.NebularCreativeTabs.BASE
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -19,22 +18,13 @@ object Nebular {
 
     @JvmStatic
     fun init() {
-        LOGGER.info(
-            "{} initializing!",
-            NAME
-        )
+        NebularBlocks.register()
+        NebularCreativeTabs.register()
+
+        REGISTRATE.register()
     }
 
     fun asResource(path: String): ResourceLocation =
         ResourceLocation(MOD_ID, path)
-
-    fun createCreativeTab(): CreativeModeTab =
-        CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
-            .title(Component.translatable("itemGroup.nebular"))
-            .icon { NebularBlocks.HULL.asStack() }
-            .displayItems { _, output ->
-                output.accept(NebularBlocks.HULL.asStack())
-            }
-            .build()
 
 }
