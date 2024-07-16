@@ -31,6 +31,11 @@ subprojects {
                 includeGroup("com.jozufozu.flywheel")
             }
         }
+        maven {
+            name = "alex's repo"
+            url = uri("http://207.180.202.42:8080/libs")
+            allowInsecureProtocol = true
+        }
     }
 
     dependencies {
@@ -42,7 +47,8 @@ subprojects {
             it.officialMojangMappings { nameSyntheticMembers = false }
         })
 
-        // see each subproject for dependencies.
+        implementation("me.alex_s168:meshlib:0.7h1")
+        implementation("me.alex_s168:mathlib:0.5h6")
     }
 }
 
@@ -51,8 +57,8 @@ allprojects {
     apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
 
-    archivesBaseName = rootProject.archives_base_name
-    group = rootProject.maven_group
+    archivesBaseName = archives_base_name
+    group = maven_group
 
     // Formats the mod version to include the loader, Minecraft version, and build number (if present)
     // example: 1.0.0+fabric-1.18.2-100

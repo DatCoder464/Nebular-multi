@@ -1,5 +1,5 @@
 # Made in Blockbench 4.9.4
-mtllib thruster.mtl
+mtllib nozzle.mtl
 
 o adjustment_thruster
 v 0.3125 1.01728575 -0.3297857500000001

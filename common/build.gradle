@@ -38,6 +38,10 @@ dependencies {
     implementation("org.valkyrienskies.core:api-game:${rootProject.vscore_version}") {
         exclude group: 'org.joml', module: ''
     }
+
+    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:obj_loader:2.3.4+1.20.1"))
+
+
 }
 
 publishing {

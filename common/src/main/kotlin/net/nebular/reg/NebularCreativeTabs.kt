@@ -13,15 +13,7 @@ import java.util.function.Supplier
 
 object NebularCreativeTabs {
 
-    val BASE: TabInfo = register("base") {
-        CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
-            .title(Component.translatable("itemGroup.nebular.base"))
-            .icon { NebularBlocks.HULL.asStack() }
-            .displayItems { param, out ->
-                out.accept(NebularBlocks.HULL.asStack())
-            }
-            .build()
-    }
+    lateinit var BASE: TabInfo
 
     fun register(name: String, supplier: Supplier<CreativeModeTab>): TabInfo {
         val id: ResourceLocation = Nebular.asResource(name)
@@ -31,6 +23,17 @@ object NebularCreativeTabs {
         return TabInfo(key, tab)
     }
 
-    fun register() {}
+    fun register() {
+        BASE = register("base") {
+            CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
+                .title(Component.translatable("itemGroup.nebular.base"))
+                .icon { NebularBlocks.HULL.asStack() }
+                .displayItems { _, out ->
+                    out.accept(NebularBlocks.HULL.asStack())
+                    out.accept(NebularBlocks.NOZZLE.asStack())
+                }
+                .build()
+        }
+    }
 
 }

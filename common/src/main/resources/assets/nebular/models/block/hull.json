@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "nebular:block/ship_hull"
+    "all": "nebular:block/hull"
   }
 }

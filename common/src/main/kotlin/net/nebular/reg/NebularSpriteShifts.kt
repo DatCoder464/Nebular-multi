@@ -9,7 +9,7 @@ import net.nebular.Nebular
 
 object NebularSpriteShifts {
 
-    val HULL: CTSpriteShiftEntry = omni("ship_hull")
+    val HULL: CTSpriteShiftEntry = omni("hull")
 
     fun omni(name : String): CTSpriteShiftEntry =
         getCT(AllCTTypes.OMNIDIRECTIONAL, name)
