@@ -11,19 +11,19 @@ object NebularSpriteShifts {
 
     val HULL: CTSpriteShiftEntry = omni("hull")
 
-    fun omni(name : String): CTSpriteShiftEntry =
+    private fun omni(name : String): CTSpriteShiftEntry =
         getCT(AllCTTypes.OMNIDIRECTIONAL, name)
 
-    fun horizontal(name : String) =
+    private fun horizontal(name : String) =
         getCT(AllCTTypes.HORIZONTAL, name)
 
-    fun vertical(name : String) =
+    private fun vertical(name : String) =
         getCT(AllCTTypes.VERTICAL, name)
 
-    fun getCT(type: CTType, blockTextureName : String, connectedTextureName: String) =
+    private fun getCT(type: CTType, blockTextureName : String, connectedTextureName: String) =
         CTSpriteShifter.getCT(type, Nebular.asResource("block/" + blockTextureName),
             Nebular.asResource("block/" + connectedTextureName + "_connected"))
 
-    fun getCT(type: CTType, blockTextureName : String) =
+    private fun getCT(type: CTType, blockTextureName : String) =
         getCT(type, blockTextureName, blockTextureName)
 }

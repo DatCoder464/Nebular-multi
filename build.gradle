@@ -2,7 +2,6 @@
     id "architectury-plugin" version "3.4-SNAPSHOT"
     id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
     id "org.jetbrains.kotlin.jvm" version "1.9.10" apply false
-    id "io.github.p03w.machete" version "1.+" // automatic jar compressing on build
 }
 
 architectury {
@@ -77,8 +76,4 @@ allprojects {
         withSourcesJar()
     }
 
-    machete {
-        // disable machete locally for faster builds
-        enabled = buildNumber != null
-    }
 }

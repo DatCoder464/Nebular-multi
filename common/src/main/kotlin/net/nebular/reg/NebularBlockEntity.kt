@@ -8,9 +8,14 @@ import net.nebular.content.block.entity.NozzleBlockEntity
 object NebularBlockEntity {
 
     val NOZZLE: BlockEntityEntry<NozzleBlockEntity> = REGISTRATE
-        .objBlockEntity(
+        .blockEntity(
             "nozzle",
-            ::NozzleBlockEntity,
-            { NebularBlocks.NOZZLE.get() })
+            ::NozzleBlockEntity)
+        .validBlock { NebularBlocks.NOZZLE.get() }
+        .register()
+
+    fun register() {
+
+    }
 
 }

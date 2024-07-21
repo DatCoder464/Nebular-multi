@@ -13,18 +13,9 @@ import org.valkyrienskies.core.api.ships.Ship
 import org.valkyrienskies.mod.common.getShipManagingPos
 
 class NozzleBlockEntity(pos: BlockPos, blockState: BlockState) : SmartBlockEntity(NebularBlockEntity.NOZZLE.get(), pos, blockState) {
-    var data: NozzleData
+    //var data: NozzleData
     var controller: NozzleController? = null
     var ID: Int = -1
-
-    init {
-        val ship: Ship? = level.getShipManagingPos(pos)
-        if (ship != null) {
-            controller = NozzleController.getOrCreate(ship as ServerShip)
-        }
-        data = NozzleData(0.0, 0.0, 0.0)
-    }
-
 
     override fun addBehaviours(behaviours: MutableList<BlockEntityBehaviour>?) {}
 

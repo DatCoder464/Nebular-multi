@@ -3,6 +3,7 @@ package net.nebular
 import com.simibubi.create.foundation.data.CreateRegistrate
 import net.minecraft.resources.ResourceLocation
 import net.nebular.foundation.NebularRegistrate
+import net.nebular.reg.NebularBlockEntity
 import net.nebular.reg.NebularBlocks
 import net.nebular.reg.NebularCreativeTabs
 import net.nebular.reg.NebularCreativeTabs.BASE
@@ -20,6 +21,7 @@ object Nebular {
     @JvmStatic
     fun init() {
         NebularBlocks.register()
+        NebularBlockEntity.register()
         NebularCreativeTabs.register()
 
         REGISTRATE.register()
