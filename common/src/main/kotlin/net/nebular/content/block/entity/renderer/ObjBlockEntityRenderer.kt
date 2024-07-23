@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.entity.BlockEntity
 import net.nebular.Nebular.MOD_ID
 import java.io.File
 
-open class ObjBlockEntityRenderer<T : BlockEntity?>(val objFile: ResourceLocation): BlockEntityRenderer<T> {
+open class ObjBlockEntityRenderer<T : BlockEntity?>(objFile: ResourceLocation): BlockEntityRenderer<T> {
     private fun loadFile(name: String): String =
         File(ResourceLocation(MOD_ID, "models/block/$name").path).readText()
 
@@ -51,15 +51,15 @@ open class ObjBlockEntityRenderer<T : BlockEntity?>(val objFile: ResourceLocatio
                 val uv = pUv ?: throw IllegalArgumentException()
 
                 builder.vertex(pose, tri.a.x, tri.a.y, tri.a.z)
-                    .uv(uv.a.u, uv.a.v)
+                    .uv(1 - uv.a.u, 1 - uv.a.v)
                     .endVertex()
 
                 builder.vertex(pose, tri.b.x, tri.b.y, tri.b.z)
-                    .uv(uv.b.u, uv.b.v)
+                    .uv(1 - uv.b.u, 1 - uv.b.v)
                     .endVertex()
 
                 builder.vertex(pose, tri.c.x, tri.c.y, tri.c.z)
-                    .uv(uv.c.u, uv.c.v)
+                    .uv(1 - uv.c.u, 1 - uv.c.v)
                     .endVertex()
             }
             val built = builder.end()
