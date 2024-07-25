@@ -6,7 +6,7 @@ import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour
 import net.minecraft.core.BlockPos
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.level.block.state.BlockState
-import net.nebular.content.forces.NozzleController
+//import net.nebular.content.forces.NozzleController
 import net.nebular.content.forces.data.NozzleData
 import net.nebular.reg.NebularBlockEntity
 import org.valkyrienskies.core.api.ships.ServerShip
@@ -15,7 +15,7 @@ import org.valkyrienskies.mod.common.getShipManagingPos
 
 class NozzleBlockEntity(pos: BlockPos, blockState: BlockState) : SmartBlockEntity(NebularBlockEntity.NOZZLE.get(), pos, blockState) {
     var ship: ServerShip? = null
-    var controller: NozzleController? = null
+    //var controller: NozzleController? = null
     var pressure = 1.0
     var temp = 0.0
     var vel = 0.0
