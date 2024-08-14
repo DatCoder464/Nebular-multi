@@ -1,3 +1,9 @@
 {
-  "parent": "block/air"
+  "parent": "block/block",
+  "loader": "porting_lib:obj",
+  "flip-v": true,
+  "model": "nebular:models/block/nozzle.obj",
+  "textures": {
+    "0": "nebular:block/nozzle"
+  }
 }

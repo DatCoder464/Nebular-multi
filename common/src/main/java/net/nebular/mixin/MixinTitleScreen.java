@@ -12,6 +12,6 @@ public class MixinTitleScreen {
 
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        Nebular.getLOGGER().info("Hello from {}!", Nebular.class.getName());
+        Nebular.LOGGER.info("Hello from {}!", Nebular.class.getName());
     }
 }
